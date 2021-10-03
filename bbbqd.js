@@ -1,12 +1,13 @@
-
 const $ = new Env('八佰伴签到');
 let bbburl = $.getdata('bbburl')
 let bbbhd = $.getdata('bbbhd')
 let bbbbody = $.getdata('bbbbody')
+let DD = RT(300000, 600000)
 !(async () => {
   if (typeof $request !== "undefined") {
     await bbbck()
   } else {
+    await $.wait(DD);
     await bbbqd();
     await $.wait(1000);
 }
